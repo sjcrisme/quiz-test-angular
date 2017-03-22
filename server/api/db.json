@@ -1,5 +1,7 @@
-[
-    { "SequenceNumber":1, "Name":"test1", "Price":10 },
-    { "SequenceNumber":3, "Name":"test3", "Price":15 },
-    { "SequenceNumber":5, "Name":"test5", "Price":20 }
-]
+{
+    "items":[
+        { "SequenceNumber":1, "Name":"test1", "Price":10 },
+        { "SequenceNumber":3, "Name":"test3", "Price":15 },
+        { "SequenceNumber":5, "Name":"test5", "Price":20 }
+    ]
+}
