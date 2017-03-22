@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-delete-item',
+  selector: 'hr-delete-item',
   template: `
-    <p>
+    <div>
       delete-item Works!
-    </p>
+    </div>
   `,
   styles: []
 })
