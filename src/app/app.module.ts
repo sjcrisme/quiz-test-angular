@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.route';
 
+import { ItemsService } from './services/items.service';
+
 
 import { AppComponent } from './app.component';
 import { ItemsListComponent } from './items-list/items-list.component';
@@ -21,7 +23,7 @@ import { DeleteItemComponent } from './delete-item/delete-item.component';
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [ItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
