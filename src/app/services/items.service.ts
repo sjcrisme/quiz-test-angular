@@ -14,4 +14,9 @@ export class ItemsService {
         return this.http.get(API_ENDPOINT)
         .map( (res:Response) => res.json() );
     }
+
+    // delItem(item){
+    //     return this.http.delete(`${API_ENDPOINT}/${item.SequenceNumber}`)
+    //                 .map((res:Response) => res.json() );
+    // }
 }

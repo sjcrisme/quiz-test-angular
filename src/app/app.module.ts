@@ -12,10 +12,15 @@ import { AppComponent } from './app.component';
 import { ItemsListComponent } from './items-list/items-list.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { DeleteItemComponent } from './delete-item/delete-item.component';
+import { EditItemComponent } from './edit-item/edit-item.component';
 
 @NgModule({
   declarations: [
-    AppComponent,ItemsListComponent,AddItemComponent, DeleteItemComponent
+    AppComponent,
+    ItemsListComponent,
+    AddItemComponent,
+    DeleteItemComponent,
+    EditItemComponent
   ],
   imports: [
     BrowserModule,
