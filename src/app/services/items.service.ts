@@ -15,6 +15,15 @@ export class ItemsService {
         .map( (res:Response) => res.json() );
     }
 
+    getItem(id) {
+        return this.http.get(`${API_ENDPOINT}/${id}`)
+         .map((res: Response) => res.json());
+    }
+
+    updateItem(item){
+        return this.http.put(`${API_ENDPOINT}/${item.id}`,item)
+                        .map((res:Response)=>res.json());
+    }
     // delItem(item){
     //     return this.http.delete(`${API_ENDPOINT}/${item.SequenceNumber}`)
     //                 .map((res:Response) => res.json() );

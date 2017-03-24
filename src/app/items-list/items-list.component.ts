@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
     <div> Items list </div>
     <ul>
         <li *ngFor="let item of items">
-        <a >{{ item.Name}}</a>
+        <a [routerLink]="['/edit/',item.id]">{{ item.Name}}</a>
         </li>
     </ul>
     `
