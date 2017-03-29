@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
         <a [routerLink]="['/edit/',item.id]">{{ item.Name}}</a>
         </li>
     </ul>
+    <button [routerLink]="['/add/']"> add item </button>
+
     `
 })
 

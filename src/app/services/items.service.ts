@@ -24,6 +24,18 @@ export class ItemsService {
         return this.http.put(`${API_ENDPOINT}/${item.id}`,item)
                         .map((res:Response)=>res.json());
     }
+
+    createItem(item) {
+       return this.http.post(API_ENDPOINT,
+        {
+         "id": item.id,
+         "SequenceNumber": item.sequenceNumber,
+         "Name": item.name,
+         "Price": item.price
+        })
+         .map((res: Response) => res.json());
+    }
+
     // delItem(item){
     //     return this.http.delete(`${API_ENDPOINT}/${item.SequenceNumber}`)
     //                 .map((res:Response) => res.json() );
