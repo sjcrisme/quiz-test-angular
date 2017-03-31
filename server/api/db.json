@@ -19,23 +19,10 @@
       "Price": 20
     },
     {
-      "id": 4,
-      "SequenceNumber": 6,
-      "Name": "new",
-      "Price": 11,
-      "newname": "new"
-    },
-    {
       "id": 5,
       "Name": "Hello Angular",
       "SequenceNumber": 7,
       "Price": 10
-    },
-    {
-      "id": 6,
-      "SequenceNumber": 8,
-      "Name": "text",
-      "Price": 15
     },
     {
       "id": 7,
@@ -44,10 +31,16 @@
       "Price": 18
     },
     {
-      "id": 8,
-      "SequenceNumber": 11,
-      "Name": "trion",
-      "Price": 23
+      "id": 6,
+      "SequenceNumber": "123",
+      "Name": "Appolo",
+      "Price": "21"
+    },
+    {
+      "SequenceNumber": "45545",
+      "Name": "666",
+      "Price": "11",
+      "id": 8
     }
   ]
 }

@@ -36,8 +36,7 @@ export class ItemsService {
          .map((res: Response) => res.json());
     }
 
-    // delItem(item){
-    //     return this.http.delete(`${API_ENDPOINT}/${item.SequenceNumber}`)
-    //                 .map((res:Response) => res.json() );
-    // }
+    deleteItem(id){
+        return this.http.delete(`${API_ENDPOINT}/${id}`);
+    }
 }

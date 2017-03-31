@@ -28,7 +28,7 @@ export class AddItemComponent {
 
                          this.itemsService.createItem(
                                         {
-                                            "id": this.size,
+                                            //"id": this.size,
                                             "sequenceNumber": form[2].value,
                                             "name": form[0].value,
                                             "price": form[1].value
