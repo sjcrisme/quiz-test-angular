@@ -6,12 +6,38 @@ import { Router } from '@angular/router';
     selector:'hr-items-list',
     template:`
     <div> Items list </div>
-    <ul>
-        <li *ngFor="let item of items">
-            <a [routerLink]="['/edit/',item.id]">{{ item.Name}}</a>
-            <button (click)="deleteItem(item.id)">x</button>
-        </li>
-    </ul>
+    <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>SequenceNumber</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of items">
+        <td>{{item.id}}</td>
+        <td><a [routerLink]="['/edit/',item.id]">{{ item.Name}}</a></td>
+        <td>{{item.SequenceNumber}}</td>
+        <td>{{item.Price}}</td>
+        <td>
+            <a [routerLink]="['/edit/',item.id]" class="glyphicon glyphicon-pencil"></a>  
+            <span (click)="deleteItem(item.id)" class="glyphicon glyphicon-remove"></span>
+        </td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>{{total}}</td>
+      <td></td>
+    </tr>
+  </tfoot>
+    </table>
     <button [routerLink]="['/add/']"> add item </button>
 
     `
@@ -19,6 +45,7 @@ import { Router } from '@angular/router';
 
 export class ItemsListComponent implements OnInit {
     private items;
+    total:number = 0;
 
     constructor(private itemsService:ItemsService, private route:Router) {}
 
@@ -27,9 +54,16 @@ export class ItemsListComponent implements OnInit {
     }
 
     getItems(){
+        var total = this.total;
         this.itemsService.getItems()
             .subscribe(
-                items=>this.items = items,
+                items=>{
+                 this.items = items;
+                 items.map(function(item) {
+                    total += parseInt(item.Price);
+                 });
+                 this.total = total;
+                },
                 error => console.error(error)
             );
     }
